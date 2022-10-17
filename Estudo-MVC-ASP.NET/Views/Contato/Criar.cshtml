@@ -1,0 +1,36 @@
+﻿@model Estudo_MVC_ASP.NET.Models.Contato
+
+@{
+    ViewData["Title"] = "Criar novo contato";
+}
+
+<h1>Criar um novo contato</h1>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Criar">
+            <div class="form-group">
+                <label asp-for="Name" class="Control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="Control-label"></label>
+                <input asp-for="Telefone" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Active" class="Control-label"></label>
+                <input type="checkbox" asp-for="Active" class="form-check-input" />
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
